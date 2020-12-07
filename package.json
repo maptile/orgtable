@@ -1,0 +1,33 @@
+{
+  "name": "orgtable",
+  "version": "0.0.1",
+  "description": "An Emacs orgmode table reader and writer",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/maptile/orgtable.git"
+  },
+  "keywords": [
+    "emacs",
+    "orgmode",
+    "table",
+    "reader",
+    "writer"
+  ],
+  "author": "maptile",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maptile/orgtable/issues"
+  },
+  "homepage": "https://github.com/maptile/orgtable#readme",
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
