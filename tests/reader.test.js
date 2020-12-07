@@ -1,9 +1,9 @@
-const reader = require('../lib/index').reader;
+const orgtable = require('../lib/index');
 
 describe('test for reader', () => {
     test.skip('can read a line', () => {
         const line = '|abc|def|ghi|';
-        const content = reader.read(line);
+        const content = orgtable.read(line);
 
         expect(content.length).toEqual(1);
         expect(content).toEqual([['abc', 'def', 'ghi']]);
@@ -11,7 +11,7 @@ describe('test for reader', () => {
 
     test('can read a two lines, and first line is header', () => {
         const lines = '|name|age|gender|\n|Nico|22|F|';
-        const content = reader.read(lines);
+        const content = orgtable.read(lines);
 
         expect(content.length).toEqual(1);
         expect(content).toEqual([{
@@ -23,7 +23,7 @@ describe('test for reader', () => {
 
     test('can read a table with separators', () => {
         const lines = '|name|age|gender|\n|--|--|--|\n|Nico|22|F|';
-        const content = reader.read(lines);
+        const content = orgtable.read(lines);
 
         expect(content.length).toEqual(1);
         expect(content).toEqual([{
